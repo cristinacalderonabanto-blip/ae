@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Aqui perzonalizo la fuente de la pagina y el color de fonfo*/
+body{
+    font-family: sans-serif;
+    background-color: #C8A588;
+}
+/* aqui personañizo la cabecera o el menu de navegacion*/
+header{
+    background-color: #802618;
+    color: green;
+    text-align: center;
+}
+#menu{
+    list-style: none;
+   display: flex;
+   gap: 25px;
+   justify-content: center;
+   padding: 50px;
+}
+#menu a{
+    text-decoration: none;
+    color: #fff;
+    background-color: #9a2c1c;
+    padding: 15px 30px;
+    border-radius: 23px;
+    font-weight: bolder;
+    transition: all 0.3s ease;
+}
+#menu a:hover{
+    background-color: #C8A588;
+}
+
+/*voy a personalizar el cuerpo de mi pagina*/
+#contenedor{
+    display: flex;
+    min-height: 1000px;
+}
+#publicidad1{
+    width: 20%;
+    background-color: #C8A588;
+
+}
+#contenido{
+    width: 60%;
+    background: #C8A588;
+}
+#publicidad2{
+    width: 20%;
+    background-color: #C8A588;
+}
+iframe{
+    width: 97%;
+    height: 97%;
+    border: 2px solid #4b1912;
+    border-radius: 40px;
+}
+footer{
+    background-color: #4b1912;
+    color: #fff;
+    text-align: center;
+    padding: 70px;
+}
+/* aqui personalizo productos*/
+#galeria_productos{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    justify-content: center;
+    gap: 20px;
+}
+.producto{
+    background-color: #641f14;
+    max-width: 300px;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0px 5px 10px;
+}
+.producto img{
+    width: 100%;
+    max-height: 300px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px;
+}
+.producto:hover{
+    box-shadow: 0px 7px 12px #38110b;
+    border: 3px solid #38110b;
+}
+button{
+    padding: 2%;
+    background-color: #802618;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+.portada img{
+    width: 100%;
+     background: linear-gradient(to right, rgba(255, 0, 0, 0.8), rgba(0, 0, 255, 0.2));
+}
+.mis_vis{
+    border: 1px solid #38110b;
+    width: 300px;
+    border-radius: 50px;
+    margin: auto;
+    padding: 15px;
+    box-shadow: 0px 5px 10px;
+}
+form{
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+
+}
+.Contacto{
+    width: 100%;
+    background-color: #d3ac8c;
+    padding: 40px; 
+   
+}
+input, textarea{
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+}
+#hamburguesa{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+#activadormenu{
+    display: none;
+}
+@media(max-width: 750px){
+    #menu{
+        flex-direction: column;
+        gap: 1px;
+        padding: 0px;
+        display: none;
+    }
+    #menu a{
+        display: flex;
+        justify-content: center;
+    }
+    #contenedor{
+        flex-direction: column;
+        text-align: center;
+    }
+    #publicidad1, #contenido, #publicidad2{
+        width: 100%;
+    }
+    #punlicidad1 img{
+        width: 150px;
+    }
+    #publicidad2 img{
+        width: 150px;
+    }
+    iframe{
+
+        height: 900px;
+    }
+    #galeria_producto{
+        grid-template-columns: repeat(1,auto);
+    }
+    #hamburguesa{
+        display: block;
+    }
+    #activadormenu:checked + #hamburguesa + #menu {
+        display: flex;
+    }
+}
+
+
